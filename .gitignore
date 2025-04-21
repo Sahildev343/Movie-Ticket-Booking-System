@@ -1,0 +1,10 @@
+# Node modules and React build
+/frontend/node_modules
+/frontend/build
+
+# Java compiled files
+/backend/target
+
+# OS-specific
+.DS_Store
+*.log
