@@ -1,10 +1,16 @@
-# Node modules and React build
-/frontend/node_modules
-/frontend/build
+# Ignore node_modules
+**/node_modules/
 
-# Java compiled files
-/backend/target
+# Ignore build outputs
+**/build/
+**/dist/
+**/target/
 
-# OS-specific
+# IDE configs
+*.iml
+.idea/
+.vscode/
+
+# System files
 .DS_Store
-*.log
+Thumbs.db

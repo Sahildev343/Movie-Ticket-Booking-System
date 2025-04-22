@@ -1,0 +1,149 @@
+/* General Styles */
+.about-container {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #1e1e2f, #3b3b58);
+    padding-bottom: 50px;
+}
+
+/* Hero Section */
+.hero {
+    background: url("https://source.unsplash.com/1600x900/?cinema,movie") center/cover;
+    padding: 100px 20px;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero h1 span {
+    color: #ffcc00;
+}
+
+.hero p {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 10%;
+    flex-wrap: wrap;
+}
+
+.feature-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-box:hover {
+    transform: scale(1.1);
+}
+
+.feature-box h3 {
+    font-size: 22px;
+    color: #ffcc00;
+}
+
+.feature-box p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* Team Section */
+.team {
+    padding: 60px 10%;
+}
+
+.team h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    width: 200px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team-member h4 {
+    font-size: 20px;
+    color: #ffcc00;
+}
+
+.team-member p {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+/* CTA Section */
+.cta {
+    background: #ffcc00;
+    padding: 50px 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+    color: #333;
+}
+
+.cta h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.cta button {
+    background: #333;
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.cta button:hover {
+    background: black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .features, .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-box, .team-member {
+        width: 80%;
+    }
+}

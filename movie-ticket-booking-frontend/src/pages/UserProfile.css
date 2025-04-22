@@ -1,0 +1,87 @@
+/* UserProfile.css */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #f0e4ff, #ffe7e7);
+    min-height: 100vh;
+  }
+  
+  .user-profile {
+    max-width: 450px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.6s ease;
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .user-profile h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #5e2d92;
+    margin-bottom: 1.5rem;
+  }
+  
+  .update-msg {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: green;
+  }
+  
+  .user-profile form label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .user-profile form input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .user-profile form input:focus {
+    border-color: #5e2d92;
+    box-shadow: 0 0 5px rgba(94, 45, 146, 0.3);
+    outline: none;
+  }
+  
+  .user-profile input[readonly] {
+    background-color: #f2f2f2;
+    cursor: not-allowed;
+  }
+  
+  .user-profile button {
+    width: 100%;
+    padding: 0.9rem;
+    font-weight: 600;
+    background-color: #5e2d92;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .user-profile button:hover {
+    background-color: #4a2180;
+  }
+  

@@ -1,0 +1,107 @@
+.booking-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #f7ecec;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 20px;
+  padding: 20px;
+}
+
+.theater-list,
+.showtime-list,
+.seat-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.theater-card {
+  border: 1px solid #ddd;
+  padding: 15px 20px;
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+}
+
+.theater-card:hover {
+  background-color: #f0f8ff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.showtime-button {
+  padding: 10px 18px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #2196F3;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.showtime-button:hover {
+  background-color: #1976d2;
+  transform: scale(1.05);
+}
+
+.showtime-button.selected {
+  background-color: #f50057;
+}
+
+.seat-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.seat-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.seat-button:hover {
+  background-color: #b0bec5;
+}
+
+.seat-button.selected {
+  background-color: green;
+  color: white;
+}
+
+.seat-button.booked {
+  background-color: red;
+  cursor: not-allowed;
+  color: white;
+}
+
+.book-button {
+  margin-top: 30px;
+  padding: 12px 25px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.book-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}

@@ -1,0 +1,166 @@
+/* =========================== 🌟 Reset Styles =========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+}
+
+/* =========================== 🌟 Admin Navbar =========================== */
+.admin-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2c3e50;
+  color: white;
+  padding: 15px 30px;
+  
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.admin-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.admin-menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.admin-menu li {
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.admin-menu li:hover {
+  background: #1abc9c;
+  color: white;
+}
+
+.logout-btn {
+  background: #e74c3c;
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}
+
+/* =========================== 🌟 Admin Stats Cards Styling =========================== */
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  flex-grow: 1;
+  margin-top: 20px;
+}
+
+/* =========================== 🌟 Stat Cards Styling =========================== */
+.stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card h3 {
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.stat-card p {
+  font-size: 22px;
+  font-weight: bold;
+  color: #16a085;
+}
+
+/* =========================== 🌟 Colors for Different Stat Cards =========================== */
+.movies {
+  border-top: 5px solid #1abc9c;
+}
+
+.users {
+  border-top: 5px solid #3498db;
+}
+
+.bookings {
+  border-top: 5px solid #9b59b6;
+}
+
+.revenue {
+  border-top: 5px solid #f39c12;
+}
+
+.reports {
+  border-top: 5px solid #e74c3c;
+}
+
+/* =========================== 🌟 Responsive Fixes =========================== */
+@media (max-width: 900px) {
+  .admin-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================== 🌟 Responsive Navbar =========================== */
+@media (max-width: 900px) {
+  .admin-menu {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .admin-menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .admin-menu li {
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
+  }
+}

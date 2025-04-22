@@ -1,0 +1,85 @@
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.movie-card {
+  width: 200px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 5px; 
+  padding: 10px; 
+  }
+
+  .movie-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Ensures uniform size without distortion */
+    border-radius: 5px;
+  }
+
+  .movie-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+
+ /* Fix button styling */
+.book-now {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  align-self: center;
+  margin-top: auto;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.book-now:hover {
+  background: linear-gradient(135deg, #ff4500, #ff8c00); /* Reverse gradient */
+  transform: scale(1.05); /* Slightly enlarge */
+  box-shadow: 0 6px 15px rgba(255, 69, 0, 0.5);
+}
+
+/* Click (active) effect */
+.book-now:active {
+  transform: scale(0.95); /* Shrinks slightly */
+  box-shadow: 0 2px 8px rgba(255, 69, 0, 0.7);
+}
+
+/* Glowing animation on hover */
+.book-now::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Activate glow effect */
+.book-now:hover::before {
+  transform: scale(1);
+}
+
+  
+  
+  

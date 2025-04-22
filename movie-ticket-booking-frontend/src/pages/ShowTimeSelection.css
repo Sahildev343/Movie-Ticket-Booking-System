@@ -1,0 +1,97 @@
+.showtime-selection-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.date-selector {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.date-selector button {
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.date-selector button.selected {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.date-selector button:hover {
+  background-color: #ddd;
+}
+
+.showtime-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.showtime-buttons button {
+  background-color: #007BFF;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.showtime-buttons button:hover {
+  background-color: #0056b3;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  font-size: 18px;
+}
+
+p {
+  text-align: center;
+  font-size: 18px;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+}
+
+.loading::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 3px solid #f4f4f4;
+  border-top: 3px solid #007BFF;
+  animation: spin 1s linear infinite;
+  margin-right: 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
