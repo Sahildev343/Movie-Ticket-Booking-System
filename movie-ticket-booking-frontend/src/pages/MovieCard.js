@@ -7,7 +7,7 @@ function MovieCard({ movie }) {
 
   var navigate = useNavigate();
   const handleBookNow = (movieId) => {
-    localStorage.setItem("movieId", movieId); // ✅ Save clicked movieId
+    localStorage.setItem("movieId", movieId); // Save clicked movieId
     navigate(`/select-theater/${movie.id}`); // Navigate to Booking Page
 };
   return (

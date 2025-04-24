@@ -14,7 +14,7 @@ function About() {
             <Navbar />
         {/* Hero Section */}
         <div className="hero">
-            <h1>Welcome to <span>Movie Booking</span></h1>
+            <h1>Welcome to <span>BookMyCinema</span></h1>
             <p>Your ultimate destination for booking movie tickets effortlessly.</p>
         </div>
 
@@ -26,11 +26,11 @@ function About() {
             </div>
             <div className="feature-box">
                 <h3>⚡ Fast & Secure</h3>
-                <p>Experience quick transactions with our secure payment gateway.</p>
+                <p>Experience quick booking our favourite movies</p>
             </div>
             <div className="feature-box">
                 <h3>🌍 Explore Movies</h3>
-                <p>Get details of upcoming movies and book in advance.</p>
+                <p>Get details of Ongoing movies and book in advance.</p>
             </div>
         </div>
 
@@ -60,7 +60,7 @@ function About() {
         <div className="cta">
             <h2>Start Booking Now!</h2>
             <p>Join thousands of happy movie-goers today.</p>
-            <button>Book Your Ticket</button>
+            <button onClick={()=> { alert("Register To Access")}}>Book Your Ticket</button>
         </div>
     </div>
     );

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./SeatSelection.css";
 import { toast, ToastContainer } from "react-toastify";
 
 const SeatSelection = ({ onBookingSuccess }) => {
+    const navigate = useNavigate();
     const { showTimeId } = useParams();
     const [bookedSeats, setBookedSeats] = useState([]);
     const [selectedSeats, setSelectedSeats] = useState([]);
@@ -59,45 +60,51 @@ const SeatSelection = ({ onBookingSuccess }) => {
         );
     };
 
+    
+
     const handleBooking = async () => {
         if (!showTimeId || !userId || !movieId) {
-            toast.error("❌ Missing showTimeId, userId or movieId.");
+            toast.error("Missing showTimeId, userId or movieId.");
             return;
         }
-
+    
         if (selectedSeats.length === 0) {
             toast.error("Please select at least one seat!");
             return;
         }
-
+    
         const bookingRequest = {
             showTimeId,
             userId,
-            movieId, // ✅ Add movieId to request
+            movieId, 
             selectedSeats,
             bookingDate: new Date().toISOString().split("T")[0],
             showTime: showTimeDetails ? showTimeDetails.time : "",
             showDate: showTimeDetails ? showTimeDetails.date : "",
         };
-
+    
         try {
             const response = await axios.post("http://localhost:8080/bookings", bookingRequest);
             console.log("✅ Booking successful:", response.data);
             toast.success("Booking Successful!");
-
+    
             setSelectedSeats([]);
             onBookingSuccess && onBookingSuccess();
-
+    
             // Refresh booked seats
             const updatedSeats = await axios.get(`http://localhost:8080/bookings/booked-seats/${showTimeId}`);
             setBookedSeats(updatedSeats.data);
-
+    
+         
+            setTimeout(() => {
+                navigate("/user/home");
+            }, 2000);
+    
         } catch (error) {
             console.error("❌ Booking failed:", error);
             toast.error(`Booking Failed: ${error.response?.data?.message || "Server Error"}`);
         }
     };
-
     return (
         <div className="book-seats-container">
             <h2 className="book-seats-title">Select Your Seats</h2>

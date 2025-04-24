@@ -9,7 +9,7 @@ function Navbar() {
     return (
         <nav className="navbar">
             <div className="logo">
-                <Link to="/">🎬 Movie Booking</Link>
+                <Link to="/">🎬 BookMyCinema</Link>
             </div>
 
             <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
